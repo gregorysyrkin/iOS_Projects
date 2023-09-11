@@ -43,7 +43,7 @@ struct ContentView: View {
     var cards: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))]) {
             ForEach(0..<currentThemeItems.count, id: \.self) {
-                index in CardView(isFaceUp: true, face: currentThemeItems[index])
+                index in CardView(face: currentThemeItems[index])
                     .aspectRatio(2/3, contentMode: .fit)
             }
         }
@@ -68,7 +68,7 @@ struct ContentView: View {
 }
 
 struct CardView: View {
-    @State var isFaceUp = true
+    @State var isFaceUp = false
     
     let face: String;
     
