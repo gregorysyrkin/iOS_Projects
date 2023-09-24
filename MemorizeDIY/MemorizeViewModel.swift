@@ -12,12 +12,12 @@ class MemorizeViewModel: ObservableObject {
     static let picturesBank = ["🤶","🎅","🛷","🥶","⚙️"]
     @Published var model = MemorizeModel(5) {
         index in
-            return Card(isFaceUp: true, content: picturesBank[index])
+            return picturesBank[index]
     }
     
-    var cards: [Card<String>] {
-        model.cards
-    }
+//    var cards: MemorizeModel.Card {
+//        model.cards
+//    }
     
     //INTENTS
     

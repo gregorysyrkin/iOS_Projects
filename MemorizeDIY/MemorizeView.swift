@@ -16,6 +16,7 @@ struct MemorizeView: View {
                 .font(.title)
             ScrollView{
                 cards
+                    .animation(.default, value: viewModel.model.cards)
             }
             Spacer()
             Button("Shuffle") {
@@ -27,10 +28,8 @@ struct MemorizeView: View {
     
     var cards: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 60))]) {
-            ForEach(viewModel.cards.indices, id: \.self) {
-                index in CardView(
-                    isFaceUp: viewModel.cards[index].isFaceUp,
-                    face: viewModel.cards[index].content)
+            ForEach(viewModel.model.cards) {
+                card in CardView(card: card)
                 .aspectRatio(2/3, contentMode: .fit)
             }
         }
@@ -38,12 +37,14 @@ struct MemorizeView: View {
 }
 
 struct CardView: View {
-    @State var isFaceUp: Bool
-    let face: String;
+//    @State var isFaceUp: Bool
+//    let face: String;
+    
+    let card: MemorizeModel<String>.Card
     
     var body: some View {
         ZStack {
-            if !isFaceUp {
+            if !card.isFaceUp {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(.blue)
                     .frame(height: 200)
@@ -52,14 +53,14 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(.blue, lineWidth: 5)
                     .frame(height: 200)
-                Text(face)
+                Text(card.content)
                     .font(.title)
                     .foregroundColor(.black)
             }
         }
         .contentShape(RoundedRectangle(cornerRadius: 10))
         .onTapGesture {
-            isFaceUp = !isFaceUp
+//            card.isFaceUp = !card.isFaceUp
         }
     }
 }

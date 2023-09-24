@@ -7,21 +7,24 @@
 
 import Foundation
 
-struct Card<CardContentType> {
-    
-    var isFaceUp: Bool
-    var content: CardContentType
-}
 
-struct MemorizeModel {
-    private(set) var cards: [Card<String>] = []
+struct MemorizeModel<CardContent> where CardContent: Equatable {
+    private(set) var cards: [Card] = []
     
-    init(_ pairsCount: Int, cardFactory: (Int) -> Card<String>) {
+    init(_ pairsCount: Int, cardContentFactory: (Int) -> CardContent) {
         for index in 0..<pairsCount {
-            let card = cardFactory(index)
-            cards.append(card)
-            cards.append(card)
+            let cardContent = cardContentFactory(index)
+            cards.append(Card(isFaceUp: true, isMatched: false, content: cardContent, id: "\(index)a"))
+            cards.append(Card(isFaceUp: true, isMatched: false, content: cardContent, id: "\(index)b"))
         }
+    }
+    
+    struct Card: Equatable, Identifiable {
+        var isFaceUp: Bool
+        var isMatched: Bool
+        var content: CardContent
+
+        var id: String
     }
     
     mutating func shuffle() {
