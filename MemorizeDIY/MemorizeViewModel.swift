@@ -15,13 +15,13 @@ class MemorizeViewModel: ObservableObject {
             return picturesBank[index]
     }
     
-//    var cards: MemorizeModel.Card {
-//        model.cards
-//    }
-    
     //INTENTS
     
     func shuffle() {
         model.shuffle()
+    }
+    
+    func handleCardClick(_ id: String) {
+        model.handleCardClick(id)
     }
 }

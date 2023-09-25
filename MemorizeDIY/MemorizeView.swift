@@ -14,7 +14,7 @@ struct MemorizeView: View {
         VStack {
             Text("Memorize!")
                 .font(.title)
-            ScrollView{
+            ScrollView {
                 cards
                     .animation(.default, value: viewModel.model.cards)
             }
@@ -31,15 +31,16 @@ struct MemorizeView: View {
             ForEach(viewModel.model.cards) {
                 card in CardView(card: card)
                 .aspectRatio(2/3, contentMode: .fit)
+                .onTapGesture {
+                    viewModel.handleCardClick(card.id)
+                }
+                .opacity(card.isMatched ? 0 : 1)
             }
         }
     }
 }
 
 struct CardView: View {
-//    @State var isFaceUp: Bool
-//    let face: String;
-    
     let card: MemorizeModel<String>.Card
     
     var body: some View {
@@ -59,11 +60,10 @@ struct CardView: View {
             }
         }
         .contentShape(RoundedRectangle(cornerRadius: 10))
-        .onTapGesture {
-//            card.isFaceUp = !card.isFaceUp
-        }
+        .disabled(card.isMatched)
     }
 }
+
 
 
 
