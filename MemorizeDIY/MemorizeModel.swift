@@ -79,9 +79,9 @@ struct ThemeModel {
     }
     
     private let themesPool: [Theme] = [
-        Theme(icons: ["🐶","🐱","🐭","🐹","🐰"], name: "Animals", size: 2, primaryColor: .brown),
-        Theme(icons: ["🍏","🍎","🍐","🍊","🍋"], name: "Fruits", size: 2, primaryColor: .purple),
-        Theme(icons: ["⚽️","🏀","🏈","⚾️","🥎"], name: "Balls", size: 2, primaryColor: .orange)
+        Theme(icons: ["🐶","🐱","🐭","🐹","🐰", "🦊", "🐻", "🐼", "🐻‍❄️", "🐨", "🐯"], name: "Animals", size: 11, primaryColor: .brown),
+//        Theme(icons: ["🍏","🍎","🍐","🍊","🍋"], name: "Fruits", size: 2, primaryColor: .purple),
+//        Theme(icons: ["⚽️","🏀","🏈","⚾️","🥎"], name: "Balls", size: 2, primaryColor: .orange)
     ]
     
     let activeTheme: Theme
