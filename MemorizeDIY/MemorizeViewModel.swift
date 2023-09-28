@@ -9,19 +9,26 @@ import Foundation
 
 
 class MemorizeViewModel: ObservableObject {
-    static let picturesBank = ["🤶","🎅","🛷","🥶","⚙️"]
-    @Published var model = MemorizeModel(5) {
-        index in
-            return picturesBank[index]
+    static var themeModel = ThemeModel()
+    
+    static func createMemorizeModel() -> MemorizeModel<String> {
+        return MemorizeModel(MemorizeViewModel.themeModel.activeTheme.size) {
+            idx in MemorizeViewModel.themeModel.activeTheme.icons[idx]
+        }
     }
+    
+    
+    @Published var memorizeModel = createMemorizeModel()
+    
     
     //INTENTS
     
-    func shuffle() {
-        model.shuffle()
+    func handleCardClick(_ id: String) {
+        memorizeModel.handleCardClick(id)
     }
     
-    func handleCardClick(_ id: String) {
-        model.handleCardClick(id)
+    func startNewGame() {
+        MemorizeViewModel.themeModel = ThemeModel(except: MemorizeViewModel.themeModel.activeTheme.name)
+        memorizeModel = MemorizeViewModel.createMemorizeModel()
+        }
     }
-}

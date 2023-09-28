@@ -13,6 +13,7 @@
 		37DB0C322AAE22DC004C5A1F /* MemorizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DB0C312AAE22DC004C5A1F /* MemorizeView.swift */; };
 		37DB0C342AAE22DD004C5A1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DB0C332AAE22DD004C5A1F /* Assets.xcassets */; };
 		37DB0C372AAE22DD004C5A1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DB0C362AAE22DD004C5A1F /* Preview Assets.xcassets */; };
+		C4F7284D2AC30EAD0077D89E /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C4F7284C2AC30EAD0077D89E /* ConfettiSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F7284D2AC30EAD0077D89E /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = MemorizeDIY;
+			packageProductDependencies = (
+				C4F7284C2AC30EAD0077D89E /* ConfettiSwiftUI */,
+			);
 			productName = MemorizeDIY;
 			productReference = 37DB0C2C2AAE22DC004C5A1F /* MemorizeDIY.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 37DB0C232AAE22DC004C5A1F;
+			packageReferences = (
+				C4F7284B2AC30EAD0077D89E /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 37DB0C2D2AAE22DC004C5A1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -347,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4F7284B2AC30EAD0077D89E /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4F7284C2AC30EAD0077D89E /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4F7284B2AC30EAD0077D89E /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37DB0C242AAE22DC004C5A1F /* Project object */;
 }
