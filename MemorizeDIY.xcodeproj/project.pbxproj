@@ -14,6 +14,10 @@
 		37DB0C342AAE22DD004C5A1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DB0C332AAE22DD004C5A1F /* Assets.xcassets */; };
 		37DB0C372AAE22DD004C5A1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DB0C362AAE22DD004C5A1F /* Preview Assets.xcassets */; };
 		C4F7284D2AC30EAD0077D89E /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C4F7284C2AC30EAD0077D89E /* ConfettiSwiftUI */; };
+		C4F7284F2AC6F1380077D89E /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7284E2AC6F1380077D89E /* AspectVGrid.swift */; };
+		C4F728512AC6FFAE0077D89E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F728502AC6FFAE0077D89E /* CardView.swift */; };
+		C4F728532AC7332A0077D89E /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F728522AC7332A0077D89E /* Pie.swift */; };
+		C4F728552AC7438A0077D89E /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F728542AC7438A0077D89E /* Cardify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		37DB0C312AAE22DC004C5A1F /* MemorizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeView.swift; sourceTree = "<group>"; };
 		37DB0C332AAE22DD004C5A1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37DB0C362AAE22DD004C5A1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C4F7284E2AC6F1380077D89E /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = SOURCE_ROOT; };
+		C4F728502AC6FFAE0077D89E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C4F728522AC7332A0077D89E /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		C4F728542AC7438A0077D89E /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +65,12 @@
 		37DB0C2E2AAE22DC004C5A1F /* MemorizeDIY */ = {
 			isa = PBXGroup;
 			children = (
+				C4F728542AC7438A0077D89E /* Cardify.swift */,
+				C4F7284E2AC6F1380077D89E /* AspectVGrid.swift */,
 				37DB0C2F2AAE22DC004C5A1F /* MemorizeDIYApp.swift */,
 				37DB0C312AAE22DC004C5A1F /* MemorizeView.swift */,
+				C4F728502AC6FFAE0077D89E /* CardView.swift */,
+				C4F728522AC7332A0077D89E /* Pie.swift */,
 				371B47EF2AB50D5A00B6D144 /* MemorizeModel.swift */,
 				371B47F12AB50D7700B6D144 /* MemorizeViewModel.swift */,
 				37DB0C332AAE22DD004C5A1F /* Assets.xcassets */,
@@ -153,7 +165,11 @@
 			files = (
 				37DB0C322AAE22DC004C5A1F /* MemorizeView.swift in Sources */,
 				371B47F02AB50D5A00B6D144 /* MemorizeModel.swift in Sources */,
+				C4F728552AC7438A0077D89E /* Cardify.swift in Sources */,
 				371B47F22AB50D7700B6D144 /* MemorizeViewModel.swift in Sources */,
+				C4F7284F2AC6F1380077D89E /* AspectVGrid.swift in Sources */,
+				C4F728532AC7332A0077D89E /* Pie.swift in Sources */,
+				C4F728512AC6FFAE0077D89E /* CardView.swift in Sources */,
 				37DB0C302AAE22DC004C5A1F /* MemorizeDIYApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

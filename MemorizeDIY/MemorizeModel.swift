@@ -16,8 +16,9 @@ struct MemorizeModel<CardContent> where CardContent: Equatable {
     init(_ pairsCount: Int, cardContentFactory: (Int) -> CardContent) {
         for index in 0..<pairsCount {
             let cardContent = cardContentFactory(index)
-            cards.append(Card(isFaceUp: false, isMatched: false, content: cardContent, id: "\(index)a"))
-            cards.append(Card(isFaceUp: false, isMatched: false, content: cardContent, id: "\(index)b"))
+            let isFaceUpInit = false
+            cards.append(Card(isFaceUp: isFaceUpInit, isMatched: false, content: cardContent, id: "\(index)a"))
+            cards.append(Card(isFaceUp: isFaceUpInit, isMatched: false, content: cardContent, id: "\(index)b"))
         }
         shuffle()
     }

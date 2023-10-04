@@ -12,7 +12,8 @@ class MemorizeViewModel: ObservableObject {
     static var themeModel = ThemeModel()
     
     static func createMemorizeModel() -> MemorizeModel<String> {
-        return MemorizeModel(MemorizeViewModel.themeModel.activeTheme.size) {
+//        return MemorizeModel(MemorizeViewModel.themeModel.activeTheme.size) {
+        return MemorizeModel(2) {
             idx in MemorizeViewModel.themeModel.activeTheme.icons[idx]
         }
     }
